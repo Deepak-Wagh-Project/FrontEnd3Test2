@@ -10,7 +10,7 @@
     background-color: black;
   
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
 }
 .ip-Address {
     color: rgba(184, 188, 204, 0.50);
@@ -30,8 +30,8 @@
     line-height: normal;
 }
 .ip-info{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
     justify-content: space-between;
 }
 .ip-info .details{
@@ -118,4 +118,35 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 
+}
+
+.more-Information{
+    display: flex;
+    color: #000;
+    flex-direction: column;
+}
+.more-Information .title{
+    color: #B8BCCC;
+text-align: center;
+font-family: Montserrat;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.more-Information .more-details{
+    color: rgba(184, 188, 204, 0.50);
+font-family: Inter;
+font-size: 34px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+#offices .No-results{
+    color: rgba(184, 188, 204, 0.50);
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
