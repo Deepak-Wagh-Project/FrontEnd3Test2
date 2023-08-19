@@ -1,0 +1,121 @@
+:root{
+    background-color: black;;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+   
+}
+.ip-information{
+    background-color: black;
+  
+    display: flex;
+    flex-direction: column;
+}
+.ip-Address {
+    color: rgba(184, 188, 204, 0.50);
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+.ip-information p{
+    color: rgba(184, 188, 204, 0.50);
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.ip-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ip-info .details{
+  display: flex;
+  flex-direction: column;
+}
+.map-frame{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: rgb(87,90,133);
+}
+.map-frame p{
+    color: #B8BCCC;
+text-align: center;
+font-family: Montserrat;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+iframe{
+    align-self: center;
+     margin-bottom: 2%;
+}
+.post-Office-Container{
+    display: flex;
+    flex-direction: column;
+
+}
+.post-Office-Container .heading{
+    color: #B8BCCC;
+text-align: center;
+font-family: Montserrat;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 10px;
+border: 3px solid #575A85;
+}
+.search-box input{
+    color: #B8BCCC;
+font-family: Montserrat;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background-color: transparent;
+outline: none;
+border: none;
+}
+.search-box button{
+    font-size: 32px;
+    height: 100%;
+    width: 15%;
+    background-color:#575A85 ;
+    columns: #B8BCCC;
+    align-self: self-end;
+    justify-self: self-end;
+}
+#offices{
+   display: grid;
+   grid-template-columns: 45% 45%;
+   
+}
+.post-Office{
+    display: flex;
+    flex-direction: column;
+    background-color: #575A85;
+    margin: 2%;
+}
+.post-Office p{
+    color: #B8BCCC;
+font-family: Montserrat;
+font-size: 34px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
