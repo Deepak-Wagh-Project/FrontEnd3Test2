@@ -91,17 +91,19 @@ outline: none;
 border: none;
 }
 .search-box button{
+    padding-top: 2px;
     font-size: 32px;
+    border: none;
     height: 100%;
     width: 15%;
     background-color:#575A85 ;
-    columns: #B8BCCC;
+   
     align-self: self-end;
     justify-self: self-end;
 }
 #offices{
    display: grid;
-   grid-template-columns: 45% 45%;
+   grid-template-columns: 48% 48%;
    
 }
 .post-Office{
@@ -149,4 +151,10 @@ line-height: normal;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.search-box button:hover{
+      color: #575A85 ; 
+      background-color: black;
+      border :2px solid  #575A85 ;
 }
