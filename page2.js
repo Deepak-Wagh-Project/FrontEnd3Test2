@@ -75,7 +75,8 @@ async function getPostOffices(pincode){
   const url=`${baseUrl}${pincode}`
   const response= await fetch(url,{method:"GET"});
   const data=await response.json();
-  if(data[0].PostOffice===null){
+  console.log(data);
+  if(data[0].PostOffice===null||data[0].Status>200){
     officeContainer.innerHTML+=`<p class="No-results">No results returned</p>`
     return;
   }
@@ -97,7 +98,13 @@ async function getPostOffices(pincode){
 
 searchButton.addEventListener("click",()=>{
     val=searchBox.value.trim();
+    if(val===''){
+      officeContainer.innerHTML=`<p class="No-results">Please enter the pincode</p>`;
+      return;
+
+    }
     getPostOffices(val);
+    
 })
 
  async function  getlocation(){
