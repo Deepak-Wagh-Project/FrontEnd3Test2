@@ -87,7 +87,7 @@ async function getPostOffices(pincode){
   
      officeContainer.innerHTML+=` <div class="post-Office">
      <div class="office-Name"><p>Name:${list[i].Name}</p></div>
-     <div class="branch-type"><P>Brance Type:${list[i].BranchType}</P></div>
+     <div class="branch-type"><P>Branch Type:${list[i].BranchType}</P></div>
      <div class="delivery-status"><p>Delivery Status:${list[i].DeliveryStatus}</p></div>
      <div class="district"><p>District:${list[i].District}</p></div>
      <div class="division"><p>Division:${list[i].Division}</p></div>
