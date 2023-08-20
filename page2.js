@@ -13,11 +13,13 @@ const frame =document.getElementById("frame");
 async function basicDetails(){
   const response=  await fetch(`https://ipinfo.io/${ipNumber}/geo?token=2c537d88a354ec`,{method:"GET"});
   const data= await response.json();
+  let arr=data.loc.split(',');
   basicInfo.innerHTML=``;
   basicInfo.innerHTML+=` <div class="ip-Address" id="ip-Address"><p>IP Address:${data.ip}</p></div>
   <div class="ip-info">
       <div class="details">
-          <div id="latitude"><p>Lat: ${data.loc}</p></div>
+          <div id="latitude"><p>Lat: ${arr[0]}</p></div>
+          <div id="longitude"><p>Long: ${arr[1]}</p></div>
        </div>
       <div class="details">
           <div id="city"><p>City: ${data.city}</p></div>
@@ -37,11 +39,32 @@ basicDetails();
 async function moreDetails(){
   const response=  await fetch(`https://ipinfo.io/${ipNumber}/geo?token=2c537d88a354ec`,{method:"GET"});
   const data= await response.json();
+
+  // current datetime string in America/Chicago timezone
+let chicago_datetime_str = new Date().toLocaleString("en-US", { timeZone: `${data.timezone}` });
+
+// create new Date object
+let date_chicago = new Date(chicago_datetime_str);
+
+// year as (YYYY) format
+let year = date_chicago.getFullYear();
+
+// month as (MM) format
+let month = ("0" + (date_chicago.getMonth() + 1)).slice(-2);
+
+// date as (DD) format
+let date = ("0" + date_chicago.getDate()).slice(-2);
+
+// date time in YYYY-MM-DD format
+let date_time = year + "-" + month + "-" + date;
+
+// "2021-03-22"
+console.log(date_time);
+  
   moreDetailContainer.innerHTML=`<div class="title"><p>More Information About You</p></div>
   <div class="more-details"><p>Time Zone:${data.timezone}</p></div>
-  <div class="more-details"><p>Date And Time:</p></div>
-  <div class="more-details"><p>Pincode:${data.postal}</p></div>
-  <div class="more-details"><p>Message: Number of pincode(s) found: </p></div>`
+  <div class="more-details"><p>Date And Time:${date_time}</p></div>
+  <div class="more-details"><p>Pincode:${data.postal}</p></div>`
   getPostOffices(data.postal);
 
 }
