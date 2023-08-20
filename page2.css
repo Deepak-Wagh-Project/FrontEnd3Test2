@@ -210,5 +210,10 @@ line-height: normal;
     .more-Information .more-details{
      font-size: 20px;
     }
+    .search-box button:hover{
+        color:black ; 
+        background-color:  #575A85;
+        
+  }
 
 }
