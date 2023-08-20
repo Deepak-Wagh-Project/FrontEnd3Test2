@@ -1,5 +1,7 @@
 
-
+:root{
+    background-color: #575A85;
+}
 .main-Container{
   display: flex;
   flex-direction: row;
@@ -66,4 +68,15 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
 
+}
+@media screen and (min-width:320px) and (max-width:480px){
+    .main-Container{
+        flex-direction: column;
+    }
+    .container-One{
+        width: 100%;
+    }
+    .container-Two{
+        width: 100%;
+    }
 }
